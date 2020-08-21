@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:theme="@style/AppTheme"
     android:background="#c0c0c0"
-    android:orientation="vertical"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:paddingTop="80dp"
     tools:context=".Login.Main_Login">
 
     <ScrollView
@@ -16,51 +18,70 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent">
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <ImageView
+                android:id="@+id/logo"
+                android:src="@drawable/letter"
+                android:layout_width="512px"
+                android:layout_height="512px"
                 android:layout_centerHorizontal="true"
-                android:text="@string/login"
-                android:gravity="center"
-                android:textSize="35dp"
-                android:textColor="@color/colorPrimary"
-                android:layout_marginTop="200sp"/>
+                android:layout_marginBottom="30dp"/>
 
-            <EditText
-                android:id="@+id/email"
-                android:layout_width="250dp"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layouttextView"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="300dp"
-                android:layout_alignParentTop="@+id/textView"
-                android:layout_centerHorizontal="true"
-                android:hint="Email"
-                android:inputType="textEmailAddress"/>
+                android:layout_below="@+id/logo"
+                android:layout_centerHorizontal="true">
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login"
+                    android:textSize="35dp"
+                    android:textColor="@color/colorPrimary"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
-                android:id="@+id/password"
-                android:layout_width="250dp"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutusername"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="@+id/email"
+                android:layout_below="@+id/layouttextView"
+                android:layout_centerHorizontal="true">
+                <EditText
+                    android:id="@+id/usernameLogin"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Username"
+                    android:inputType="textPersonName"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutpassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutusername"
                 android:layout_centerHorizontal="true"
-                android:hint="Password"
-                android:inputType="textPassword"
-                android:layout_marginTop="340dp"
-                app:passwordToggleEnabled="true"/>
+                app:passwordToggleEnabled="true">
+                <EditText
+                    android:id="@+id/passwordLogin"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:inputType="textPassword"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/btn_login"
+                android:id="@+id/loginLogin"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:text="Login"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="400dp"
-                android:layout_alignParentTop="@+id/password"
-                android:layout_marginBottom="50dp"
+                android:text="LOGIN"
                 android:textColor="@android:color/white"
-                android:background="@drawable/login_button"/>
+                android:background="@drawable/login_button"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/layoutpassword"
+                android:layout_marginTop="30dp"/>
 
         </RelativeLayout>
     </ScrollView>
 
-</LinearLayout>
+</RelativeLayout>
