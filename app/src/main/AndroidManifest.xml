@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.suratlea">
+<<<<<<< HEAD
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
+=======
+
+    <uses-permission android:name="android.permission.INTERNET" />
+>>>>>>> 5f3dd3076660848202a0c740258422f62b1c64fd
 
     <application
         android:allowBackup="true"
@@ -11,12 +16,21 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+<<<<<<< HEAD
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+=======
+        android:theme="@style/AppTheme">
+        <activity android:name=".Menu.ui.gallery.UpdateOutbox"></activity>
+        <activity android:name=".Menu.ui.home.LihatInbox" />
+        <activity android:name=".Menu.ui.gallery.LihatOutbox" />
+        <activity android:name=".Menu.ui.gallery.MainActivity" />
+        <activity android:name=".Menu.ui.gallery.BuatOutbox" />
+>>>>>>> 5f3dd3076660848202a0c740258422f62b1c64fd
         <activity
             android:name=".Menu.Main"
             android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Login.Main_Login" />
         <activity android:name=".Launcher.MainActivity">
             <intent-filter>
